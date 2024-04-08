@@ -9,3 +9,6 @@ print(masc_of_bill(bill))
 
 card_or_bill = input()
 print(masks_of_cards(card_or_bill))
+
+get_time = input()
+print(right_data(get_time))
