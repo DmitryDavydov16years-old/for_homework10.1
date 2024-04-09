@@ -1,5 +1,5 @@
 from src.masks import masc_of_bill, masc_of_card
-from src.widget import masks_of_cards, give_data
+from src.widget import give_data, masks_of_cards
 
 card = input()
 print(masc_of_card(card))

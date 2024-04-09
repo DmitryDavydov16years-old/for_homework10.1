@@ -18,4 +18,3 @@ def give_data(time: str) -> str:
     """
     redact_time = time.split("T")[0].split("-")
     return f"{redact_time[2]}.{redact_time[1]}.{redact_time[0]}"
-
