@@ -2,7 +2,7 @@ from src.masks import masking_account, masking_card
 
 
 def masking_card_or_account(card_or_account: str) -> str:
-    """ "
+    """
     Функция переиспользует ранее написанные функции и возвращает исходную строку с замаскированным номером карты/счета.
     """
     split_card_or_account = card_or_account.split(" ")
