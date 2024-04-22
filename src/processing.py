@@ -3,7 +3,7 @@ def sorting_the_dictionary(list_of_dictionaries: list, value_for_key: str = "EXE
     функция принимает на вход список словарей и значение для
     ключа state (опциональный параметр со значением по умолчанию EXECUTED)
     и возвращает новый список, содержащий только те словари, у которых ключ
-    state содержит переданное в функцию значение
+    state содержит переданное в функцию значение.
     """
     modified_dictionary = []
     for dictionary in list_of_dictionaries:
