@@ -21,5 +21,5 @@ def test_masking_account(string: str, expected_result: str) -> None:
     assert masking_account(string) == expected_result
 
 
-def test_masking_card(test_data: str) -> None :
+def test_masking_card(test_data: str) -> None:
     assert masking_card(test_data) == "7000 79**  **** 6361"
