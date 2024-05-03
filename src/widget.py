@@ -18,22 +18,3 @@ def changes_date_line(date: str) -> str:
     """
     split_date = date.split("T")[0].split("-")
     return f"{split_date[2]}.{split_date[1]}.{split_date[0]}"
-
-
-# def replacing_email_addresses(line_with_text: str) -> str:
-#     """
-#     Фунция принимает строку текста, содержащую одно или несколько предложений,
-#     и заменяет все email-адреса на маскированные версии
-#     """
-#     split_line_with_text = line_with_text.split(" ")
-#     for word in split_line_with_text:
-#         if "@" in word:
-#             split_word = word.split("@")
-#             part_of_word = split_word[0]
-#             len_part_of_word = len(part_of_word)
-#             list_part_of_word = list(part_of_word)
-#             hidden_characters = "X" * (len_part_of_word - 3)
-#             immutable_part = "".join(list_part_of_word[:3])
-#             number_of_item = split_line_with_text.index(word)
-#             split_line_with_text[number_of_item] = f"{immutable_part}{hidden_characters}@{split_word[1]}"
-#     return " ".join(split_line_with_text)
