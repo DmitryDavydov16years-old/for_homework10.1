@@ -18,8 +18,7 @@ def dictionaries_financial_transaction_data(path_to_file):
         return data
 
 
-value = [
-    {
+value = {
     "id": 667307132,
     "state": "EXECUTED",
     "date": "2019-07-13T18:51:29.313309",
@@ -34,7 +33,6 @@ value = [
     "from": "Maestro 1308795367077170",
     "to": "Счет 96527012349577388612"
 }
-]
 
 
 def returns_transaction_amount(tranzaction):
@@ -45,4 +43,4 @@ def returns_transaction_amount(tranzaction):
     return float(tranzaction["operationAmount"]["amount"]) * response_data["conversion_rates"]["RUB"]
 
 
-print(returns_transaction_amount(value))
+
