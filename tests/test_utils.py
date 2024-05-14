@@ -1,8 +1,6 @@
-from unittest.mock import Mock
 from unittest.mock import patch
-import requests
+
 from src.utils import dictionaries_financial_transaction_data, returns_transaction_amount
-import json
 
 for_example = {
     "id": 667307132,
@@ -27,15 +25,10 @@ def test_returns_transaction_amount():
         assert returns_transaction_amount(for_example) == 97853.86
 
 
-
-
-
-
 def test_dictionaries_financial_transaction_data():
     with patch('requests.get') as mock_get:
         mock_get.return_value.json.return_value = value
         assert dictionaries_financial_transaction_data('../data/operations.json') == value
-
 
 
 value = [
