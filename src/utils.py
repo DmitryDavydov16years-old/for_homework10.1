@@ -1,5 +1,6 @@
 import json
 import os
+from typing import Any
 
 import requests
 from dotenv import load_dotenv
@@ -8,8 +9,8 @@ API_KEY = os.getenv("api_keys")
 load_dotenv()
 
 
-def dictionaries_financial_transaction_data(path_to_file):
-    """"
+def dictionaries_financial_transaction_data(path_to_file: str) -> Any:
+    """ "
     Функция, которая принимает на вход путь до JSON-файла и возвращает список словарей
      с данными о финансовых транзакциях. Если файл пустой, содержит не список или не найден,
      функция возвращает пустой список.
@@ -23,8 +24,8 @@ def dictionaries_financial_transaction_data(path_to_file):
         return data
 
 
-def returns_transaction_amount(transaction):
-    """"
+def returns_transaction_amount(transaction: dict) -> Any:
+    """ "
     Реализуйте функцию, которая принимает на вход транзакцию и возвращает сумму транзакции (amount) в рублях,
     возвращает тип float. Если транзакция была в USD или EUR, идет обращение к внешнему API для получения текущего
      курса валют и конвертации суммы операции в рубли.
