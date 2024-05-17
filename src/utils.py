@@ -6,7 +6,7 @@ import requests
 from dotenv import load_dotenv
 
 load_dotenv()
-API_KEY = os.getenv("api_keys")
+API_KEY = os.getenv("API_KEY")
 
 
 def finding_dictionaries_with_financial_transaction_data(path_to_file: str) -> Any:
