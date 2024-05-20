@@ -6,7 +6,7 @@ logger = setup_logging()
 
 
 # Я напишу здесь каку-нибудь функцию, чтоб тут был не только лог
-def plusOne(digits: List[int]) -> List[int]:
+def plusOne(digits: list) -> List[int]:
     """
     Функция принимает целое чсило в виде целочисленного массива цифр,
     увеличвает это целое число на единицу и возвращает полученный массив цифр.
@@ -21,3 +21,6 @@ def plusOne(digits: List[int]) -> List[int]:
         new_array.append(int(number))
     logger.info("Все в порядке")
     return new_array
+
+
+print(plusOne([1, 3, 4]))
