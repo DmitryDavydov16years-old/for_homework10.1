@@ -21,6 +21,3 @@ def plusOne(digits: list) -> List[int]:
         new_array.append(int(number))
     logger.info("Все в порядке")
     return new_array
-
-
-print(plusOne([1, 3, 4]))
