@@ -1,6 +1,8 @@
+from unittest.mock import patch
+
 import pytest
 
-from src.masks import masking_account, masking_card
+from src.masks import masking_account, masking_card, open_f
 
 
 @pytest.fixture
@@ -23,3 +25,11 @@ def test_masking_account(string: str, expected_result: str) -> None:
 
 def test_masking_card(test_data: str) -> None:
     assert masking_card(test_data) == "7000 79**  **** 6361"
+
+
+@patch('builtins.open')
+def test_open_f(mock_open):
+    mock_file = mock_open.return_value.__enter__.return_value
+    mock_file.readlines.return_value = 'test data'
+    assert open_f("..\\data\\t.text") == 'test data'
+
