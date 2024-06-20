@@ -17,11 +17,3 @@ def masking_account(cards: str) -> str:
     """
     logger.info("Все работает")
     return f"**{cards[-4:]}"
-
-
-def open_f(file_path):
-    with open(file_path, 'r', encoding="UTF8") as f:
-        return f.readlines()
-
-
-
