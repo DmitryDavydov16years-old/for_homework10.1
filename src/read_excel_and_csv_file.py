@@ -6,7 +6,7 @@ def read_csv_file(filename: str) -> list[dict]:
     Читает файл csv типа и возвращает словарь
     """
     with open(filename, encoding="UTF-8") as file:
-        data = pd.read_csv(file)
+        data = pd.read_csv(file, delimiter=";")
         return data.to_dict("records")
 
 
